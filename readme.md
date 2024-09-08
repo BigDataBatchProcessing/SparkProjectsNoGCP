@@ -1,3 +1,81 @@
+# Instalacja głównych komponentów 
+
+## Instalacja Javy 
+
+Aby odwzorować "docelowe" środowisko potrzebujemy Javy (JDK) w wersji 11.X. Dla przykładu:
+```
+https://adoptium.net/temurin/releases/?version=11&arch=x64&package=jdk&os=windows
+```
+
+## Instalacja Sparka 
+
+Potrzebujemy Apache Spark 3.5.X dla Apache Hadoop 3.3
+```
+https://spark.apache.org/downloads.html
+```
+
+Pakiet wskazanego oprogramowania pobieramy i rozpakowujemy np. do katalogu 
+```
+C:\Programy\spark-3.5.2-bin-hadoop3
+```
+
+## Instalacja Apache Hadoop
+
+a.	`winutils` (w przypadku środowiska *Windows*)
+```
+https://github.com/cdarlint/winutils
+```
+
+b.	*Apache Hadoop 3.3.6* (w przypadku środowiska *Linux*)
+```
+https://hadoop.apache.org/releases.html
+```
+
+Pakiet wskazanego oprogramowania pobieramy i rozpakowujemy np. do katalogu 
+```
+C:\Programy\winutils\hadoop-3.3.6
+```
+
+## Zmienne środowiskowe 
+
+Dla wszystkich powyższych składników definiujemy zmienne środowiskowe:
+
+- `JAVA_HOME` (np. `C:\Program Files\Eclipse Adoptium\jdk-11.0.24.8-hotspot`)
+- `SPARK_HOME` (np. `C:\Programy\spark-3.5.2-bin-hadoop3`)
+- `HADOOP_HOME` (np. `C:\Programy\winutils\hadoop-3.3.6`)
+
+
+Dodatkowo do zmiennej `PATH` dodajemy 
+
+- `%JAVA_HOME%\bin`
+- `%HADOOP_HOME%\bin`
+- `%SPARK_HOME%\bin`
+
+# Python
+
+Instalujemy Pythona w wersji odpowiedniej dla naszego Sparka np. 3.11.8
+
+## Sprawdzenie 
+
+Koniecznie sprawdzamy dostępność zainstalowanych komponentów
+
+Dla przykładu:
+```
+C:\Users\kjankiewicz>where java
+C:\Program Files\Eclipse Adoptium\jdk-11.0.24.8-hotspot\bin\java.exe
+
+C:\Users\kjankiewicz>where hadoop
+C:\Programy\winutils\hadoop-3.3.6\bin\hadoop
+C:\Programy\winutils\hadoop-3.3.6\bin\hadoop.cmd
+
+C:\Users\kjankiewicz>where pyspark
+C:\Programy\spark-3.5.2-bin-hadoop3\bin\pyspark
+C:\Programy\spark-3.5.2-bin-hadoop3\bin\pyspark.cmd
+
+C:\Users\kjankiewicz>py --version
+Python 3.11.9
+```
+
 # Konfiguracja wirtualnego środowiska
 
 1. Utwórz katalog dla naszych projektów dla przykładu 
