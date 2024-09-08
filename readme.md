@@ -189,7 +189,7 @@ df = spark.read.json("C:\Programy\spark-3.5.2-bin-hadoop3\examples/src/main/reso
 df.show()
 ```
 
-5. Pamiętaj, że w trakcie gdy sesja Sparka jest aktywna, dostępny jest jej interfejs sieciowy 
+5. Pamiętaj, że w czasie gdy sesja Sparka jest aktywna, dostępny jest jej interfejs sieciowy 
 ```
 # Uzyskanie adresu interfejsu webowego
 spark_ui_url = spark.sparkContext.uiWebUrl
